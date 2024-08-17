@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.vaultApplicationName }}
+  namespace: {{ .Values.devnamespace }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.vaultApplicationName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.vaultApplicationName }}
+    spec:
+      containers:
+      - name: {{ .Values.vaultApplicationName }}
+        image:  "{{ .Values.vaultimage.name  }}:{{ .Values.vaultimage.tag }}"
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8200

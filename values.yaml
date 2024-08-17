@@ -1,0 +1,8 @@
+devnamespace: dev
+vaultApplicationName: vault-app
+vaultservice: vault-app-service
+
+
+vaultimage:
+  name: 416591745024.dkr.ecr.eu-west-2.amazonaws.com/vault-repo/vault-app
+  tag: "latest"
