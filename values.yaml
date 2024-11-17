@@ -1,8 +1,11 @@
-devnamespace: dev
+toolingnamespace: tooling
 vaultApplicationName: vault-app
-vaultservice: vault-app-service
-
 
 vaultimage:
   name: 416591745024.dkr.ecr.eu-west-2.amazonaws.com/vault-repo/vault-app
   tag: "latest"
+
+vaultservice: vault-app-service
+serviceingress:  vault-ingress-service
+vaultappbaseURL : vault.globalfrontierlink.co.uk
+
